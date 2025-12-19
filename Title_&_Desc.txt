@@ -1,0 +1,13 @@
+DA-AT-VFI
+(Domain-Adaptive, Arbitrary-Timestep Video Frame Interpolation)
+
+A deployable, arbitrary-resolution, domain-adapted VFI system
+with controllable temporal interpolation, validated on large-scale
+deformable-motion imagery.
+
+A curriculum-trained, domain-adaptive VFI system that generalizes
+across rigid, semi-rigid, and deformable motion regimes, while
+supporting arbitrary resolution and arbitrary timestep
+interpolation.
+
+
