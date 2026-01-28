@@ -1,0 +1,26 @@
+
+=== Scanning VIMEO ===
+Found 73191 candidate sequences
+
+VIMEO SUMMARY:
+Checked: 2000
+Bad samples: 0
+Bad ratio: 0.000
+
+=== Scanning X4K ===
+Found 555 candidate sequences
+
+X4K SUMMARY:
+Checked: 555
+Bad samples: 0
+Bad ratio: 0.000
+
+=== Scanning WMS ===
+Found 18 candidate sequences
+
+WMS SUMMARY:
+Checked: 18
+Bad samples: 0
+Bad ratio: 0.000
+
+Scan complete.

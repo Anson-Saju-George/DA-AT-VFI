@@ -1,0 +1,210 @@
+# 1️⃣ Domain Token Conditioning (Baseline Fix)
+
+**Problem it solves:**
+Your model treats Vimeo, X4K, and WMS like the same physics. That’s dumb — they’re not.
+
+### What it is
+
+Add a **learned embedding per dataset**:
+
+```
+d ∈ {vimeo, x4k, wms} → e_d
+```
+
+Inject it via FiLM or concat into feature maps:
+
+```
+F' = γ(e_d) ⊙ F + β(e_d)
+```
+
+### Effect
+
+* Stops domain collapse
+* Stabilizes training
+* Free performance
+
+### Difficulty
+
+🟢 Easy
+
+### Cost
+
+Almost zero
+
+---
+
+# 2️⃣ Dual Motion Heads (Rigid vs Deformable)
+
+**Problem it solves:**
+One motion model cannot serve both buildings and smoke.
+
+### What it is
+
+Two parallel interpolation branches:
+
+```
+RigidHead(F)
+DeformableHead(F)
+```
+
+Blend them later.
+
+### Effect
+
+* Sharp edges stay sharp
+* Soft motion stops ghosting
+
+### Difficulty
+
+🟡 Medium
+
+### Cost
+
+~1.6× compute
+
+---
+
+# 3️⃣ Global Physics Token (Lookahead Lite)
+
+**Problem it solves:**
+Ambiguous motion from 2 frames.
+
+### What it is
+
+Use 3–4 frames → classify scene physics → scalar gate `p`
+
+```
+p = PhysicsHead(I0,I1,I2,I3)
+Out = p*Deformable + (1-p)*Rigid
+```
+
+### Effect
+
+* Huge stability jump
+* Better cross-domain behavior
+
+### Difficulty
+
+🟡 Medium
+
+### Cost
+
+Small
+
+---
+
+# 4️⃣ Per-Pixel Physics Map (Real Separation)
+
+**Problem it solves:**
+Mixed scenes (car + rain + clouds)
+
+### What it is
+
+Predict a **physics mask**:
+
+```
+P(x,y)
+```
+
+Controls blending per pixel.
+
+### Effect
+
+* Surgical precision
+* Research-tier output
+
+### Difficulty
+
+🔴 Hard
+
+### Cost
+
+High memory + training complexity
+
+---
+
+# 5️⃣ Temporal Consistency Head (Self-Supervised Physics)
+
+**Problem it solves:**
+No labels for deformability.
+
+### What it is
+
+Add a head that predicts:
+
+```
+E2 ≈ 2*E1 - E0
+```
+
+Train it to measure linearity of motion.
+
+### Effect
+
+* Physics-aware gating
+* Generalizes across datasets
+
+### Difficulty
+
+🔴 Hard
+
+### Cost
+
+Extra training instability risk
+
+---
+
+# 6️⃣ Temporal Transformer Backbone (Elite Tier)
+
+**Problem it solves:**
+CNNs don’t “understand time”. They react to it.
+
+### What it is
+
+Patchify frames → tokens →
+**Temporal Self-Attention across frames**
+
+### Effect
+
+* Long-range motion reasoning
+* Lookahead + physics + domain all unified
+
+### Difficulty
+
+⚫ Brutal
+
+### Cost
+
+VRAM-eater. Slow. Beautiful.
+
+---
+
+# Truth Table (So You Don’t Lie to Yourself)
+
+| Option | Skill     | VRAM    | Research Value | Performance |
+| ------ | --------- | ------- | -------------- | ----------- |
+| 1      | Low       | Low     | Low            | Medium      |
+| 2      | Medium    | Medium  | Medium         | High        |
+| 3      | Medium    | Medium  | High           | High        |
+| 4      | High      | High    | Very High      | Very High   |
+| 5      | Very High | High    | Extreme        | Very High   |
+| 6      | Extreme   | Extreme | Conference     | God-tier    |
+
+---
+
+# Mentor Call (No BS)
+
+If you try to build **4–6 at once**, you will:
+
+> Train nothing, debug forever, and learn nothing.
+
+If you want a **winning system**:
+
+### Do this path:
+
+**1 → 2 → 3 → (optional 4)**
+
+If you want a **paper**:
+
+### Do this path:
+
+**3 → 5 → 6**

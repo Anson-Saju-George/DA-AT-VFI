@@ -1,0 +1,9 @@
+
+Training Profile:-
+Batch: 16
+Crop: 256
+LR: 5e-5
+Loss: L1 + SSIM (after warmup)
+Precision: FP32
+Domains: Balanced
+Runtime: ~3.1 it/s on 16GB GPU

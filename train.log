@@ -1,0 +1,121 @@
+==========================================================================================
+Unified VFI Training
+Device: CUDA
+Log file: train.log
+==========================================================================================
+
+Building datasets...
+  VIMEO samples: 48747
+  X4K samples: 110
+  WMS samples: 47692
+
+Building model...
+
+Unified training started
+Batch=16 | Workers=10 | LR=5e-05
+Warmup steps (L1 only): 5000
+Rolling checkpoint: model_latest.pt
+------------------------------------------------------------------------------------------
+[000000/50000] X4K    | loss 0.0595 | VRAM 1.4/15.9GB (9%) | GPU 92% | 0.12 it/s | ETA 6982.1 min | batch 16
+[000500/50000] X4K    | loss 0.0488 | VRAM 9.8/15.9GB (62%) | GPU 0% | 3.04 it/s | ETA 271.3 min | batch 16
+[001000/50000] WMS    | loss 0.0300 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 259.9 min | batch 16
+[001500/50000] VIMEO  | loss 0.0417 | VRAM 9.8/15.9GB (62%) | GPU 100% | 3.18 it/s | ETA 254.0 min | batch 16
+[002000/50000] VIMEO  | loss 0.0435 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.19 it/s | ETA 250.6 min | batch 16
+[002500/50000] WMS    | loss 0.0590 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.21 it/s | ETA 246.9 min | batch 16
+[003000/50000] X4K    | loss 0.0467 | VRAM 9.8/15.9GB (62%) | GPU 100% | 3.22 it/s | ETA 243.0 min | batch 16
+[003500/50000] VIMEO  | loss 0.0189 | VRAM 9.8/15.9GB (62%) | GPU 100% | 2.81 it/s | ETA 275.5 min | batch 16
+[004000/50000] WMS    | loss 0.0172 | VRAM 9.8/15.9GB (62%) | GPU 97% | 2.78 it/s | ETA 275.3 min | batch 16
+[004500/50000] VIMEO  | loss 0.0264 | VRAM 9.8/15.9GB (62%) | GPU 97% | 2.83 it/s | ETA 267.9 min | batch 16
+[005000/50000] VIMEO  | loss 0.1160 | VRAM 9.8/15.9GB (62%) | GPU 99% | 2.87 it/s | ETA 261.6 min | batch 16
+[005500/50000] X4K    | loss 0.1422 | VRAM 9.8/15.9GB (62%) | GPU 98% | 2.90 it/s | ETA 255.4 min | batch 16
+[006000/50000] WMS    | loss 0.1405 | VRAM 9.8/15.9GB (62%) | GPU 100% | 2.93 it/s | ETA 250.2 min | batch 16
+[006500/50000] WMS    | loss 0.0550 | VRAM 9.8/15.9GB (62%) | GPU 100% | 2.96 it/s | ETA 245.2 min | batch 16
+[007000/50000] WMS    | loss 0.1410 | VRAM 9.8/15.9GB (62%) | GPU 98% | 2.98 it/s | ETA 240.5 min | batch 16
+[007500/50000] WMS    | loss 0.1228 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.00 it/s | ETA 236.1 min | batch 16
+[008000/50000] VIMEO  | loss 0.0550 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.01 it/s | ETA 232.2 min | batch 16
+[008500/50000] X4K    | loss 0.1672 | VRAM 9.8/15.9GB (62%) | GPU 88% | 3.03 it/s | ETA 228.6 min | batch 16
+[009000/50000] X4K    | loss 0.1754 | VRAM 9.8/15.9GB (62%) | GPU 100% | 3.04 it/s | ETA 224.9 min | batch 16
+[009500/50000] X4K    | loss 0.1647 | VRAM 9.8/15.9GB (62%) | GPU 0% | 3.05 it/s | ETA 221.2 min | batch 16
+[010000/50000] X4K    | loss 0.1419 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.06 it/s | ETA 218.2 min | batch 16
+[010500/50000] X4K    | loss 0.2118 | VRAM 9.8/15.9GB (62%) | GPU 99% | 3.07 it/s | ETA 214.7 min | batch 16
+[011000/50000] X4K    | loss 0.1777 | VRAM 9.8/15.9GB (62%) | GPU 99% | 3.08 it/s | ETA 211.4 min | batch 16
+[011500/50000] WMS    | loss 0.1694 | VRAM 9.8/15.9GB (62%) | GPU 96% | 3.08 it/s | ETA 208.2 min | batch 16
+[012000/50000] VIMEO  | loss 0.0900 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.09 it/s | ETA 205.2 min | batch 16
+[012500/50000] WMS    | loss 0.3671 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.09 it/s | ETA 202.3 min | batch 16
+[013000/50000] VIMEO  | loss 0.0743 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.09 it/s | ETA 199.3 min | batch 16
+[013500/50000] VIMEO  | loss 0.0684 | VRAM 9.8/15.9GB (62%) | GPU 99% | 3.10 it/s | ETA 196.4 min | batch 16
+[014000/50000] VIMEO  | loss 0.0987 | VRAM 9.8/15.9GB (62%) | GPU 87% | 3.10 it/s | ETA 193.7 min | batch 16
+[014500/50000] X4K    | loss 0.1640 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.10 it/s | ETA 190.8 min | batch 16
+[015000/50000] VIMEO  | loss 0.0796 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.10 it/s | ETA 187.9 min | batch 16
+[015500/50000] VIMEO  | loss 0.0788 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.10 it/s | ETA 185.2 min | batch 16
+[016000/50000] VIMEO  | loss 0.1108 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.11 it/s | ETA 182.4 min | batch 16
+[016500/50000] VIMEO  | loss 0.0657 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.11 it/s | ETA 179.8 min | batch 16
+[017000/50000] WMS    | loss 0.2608 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.11 it/s | ETA 176.8 min | batch 16
+[017500/50000] VIMEO  | loss 0.1121 | VRAM 9.8/15.9GB (62%) | GPU 100% | 3.11 it/s | ETA 174.0 min | batch 16
+[018000/50000] WMS    | loss 0.1151 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.11 it/s | ETA 171.3 min | batch 16
+[018500/50000] VIMEO  | loss 0.0653 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.12 it/s | ETA 168.5 min | batch 16
+[019000/50000] VIMEO  | loss 0.0885 | VRAM 9.8/15.9GB (62%) | GPU 0% | 3.12 it/s | ETA 165.8 min | batch 16
+[019500/50000] X4K    | loss 0.1428 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.11 it/s | ETA 163.3 min | batch 16
+[020000/50000] VIMEO  | loss 0.0695 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.11 it/s | ETA 160.6 min | batch 16
+[020500/50000] WMS    | loss 0.1635 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.11 it/s | ETA 157.9 min | batch 16
+[021000/50000] X4K    | loss 0.1825 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.12 it/s | ETA 155.1 min | batch 16
+[021500/50000] WMS    | loss 0.1947 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.12 it/s | ETA 152.3 min | batch 16
+[022000/50000] VIMEO  | loss 0.0911 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.12 it/s | ETA 149.7 min | batch 16
+[022500/50000] VIMEO  | loss 0.0664 | VRAM 9.8/15.9GB (62%) | GPU 100% | 3.12 it/s | ETA 147.0 min | batch 16
+[023000/50000] X4K    | loss 0.1702 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.12 it/s | ETA 144.3 min | batch 16
+[023500/50000] X4K    | loss 0.1527 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.12 it/s | ETA 141.6 min | batch 16
+[024000/50000] WMS    | loss 0.1273 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.12 it/s | ETA 138.8 min | batch 16
+[024500/50000] WMS    | loss 0.2238 | VRAM 9.8/15.9GB (62%) | GPU 100% | 3.12 it/s | ETA 136.2 min | batch 16
+[025000/50000] VIMEO  | loss 0.0939 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.12 it/s | ETA 133.5 min | batch 16
+[025500/50000] WMS    | loss 0.0731 | VRAM 9.8/15.9GB (62%) | GPU 96% | 3.12 it/s | ETA 130.8 min | batch 16
+[026000/50000] VIMEO  | loss 0.0566 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.12 it/s | ETA 128.2 min | batch 16
+[026500/50000] VIMEO  | loss 0.0603 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.12 it/s | ETA 125.5 min | batch 16
+[027000/50000] X4K    | loss 0.1857 | VRAM 9.8/15.9GB (62%) | GPU 0% | 3.12 it/s | ETA 122.8 min | batch 16
+[027500/50000] WMS    | loss 0.2556 | VRAM 9.8/15.9GB (62%) | GPU 96% | 3.12 it/s | ETA 120.1 min | batch 16
+[028000/50000] X4K    | loss 0.2108 | VRAM 9.8/15.9GB (62%) | GPU 0% | 3.12 it/s | ETA 117.5 min | batch 16
+[028500/50000] VIMEO  | loss 0.0563 | VRAM 9.8/15.9GB (62%) | GPU 100% | 3.12 it/s | ETA 114.7 min | batch 16
+[029000/50000] WMS    | loss 0.1135 | VRAM 9.8/15.9GB (62%) | GPU 100% | 3.12 it/s | ETA 112.0 min | batch 16
+[029500/50000] VIMEO  | loss 0.0627 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.12 it/s | ETA 109.4 min | batch 16
+[030000/50000] VIMEO  | loss 0.0617 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.12 it/s | ETA 106.8 min | batch 16
+[030500/50000] VIMEO  | loss 0.0562 | VRAM 9.8/15.9GB (62%) | GPU 96% | 3.12 it/s | ETA 104.1 min | batch 16
+[031000/50000] VIMEO  | loss 0.0707 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.12 it/s | ETA 101.4 min | batch 16
+[031500/50000] X4K    | loss 0.2226 | VRAM 9.8/15.9GB (62%) | GPU 34% | 3.12 it/s | ETA 98.7 min | batch 16
+[032000/50000] VIMEO  | loss 0.0652 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.12 it/s | ETA 96.0 min | batch 16
+[032500/50000] VIMEO  | loss 0.0868 | VRAM 9.8/15.9GB (62%) | GPU 99% | 3.12 it/s | ETA 93.3 min | batch 16
+[033000/50000] VIMEO  | loss 0.0570 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.13 it/s | ETA 90.6 min | batch 16
+[033500/50000] WMS    | loss 0.1328 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.13 it/s | ETA 87.9 min | batch 16
+[034000/50000] WMS    | loss 0.2111 | VRAM 9.8/15.9GB (62%) | GPU 96% | 3.13 it/s | ETA 85.2 min | batch 16
+[034500/50000] WMS    | loss 0.2021 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.13 it/s | ETA 82.5 min | batch 16
+[035000/50000] X4K    | loss 0.1641 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.13 it/s | ETA 79.8 min | batch 16
+[035500/50000] VIMEO  | loss 0.0779 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.13 it/s | ETA 77.2 min | batch 16
+[036000/50000] X4K    | loss 0.1541 | VRAM 9.8/15.9GB (62%) | GPU 96% | 3.13 it/s | ETA 74.5 min | batch 16
+[036500/50000] VIMEO  | loss 0.0511 | VRAM 9.8/15.9GB (62%) | GPU 91% | 3.13 it/s | ETA 71.8 min | batch 16
+[037000/50000] VIMEO  | loss 0.0637 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.13 it/s | ETA 69.1 min | batch 16
+[037500/50000] VIMEO  | loss 0.0807 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 66.4 min | batch 16
+[038000/50000] WMS    | loss 0.2015 | VRAM 9.8/15.9GB (62%) | GPU 53% | 3.14 it/s | ETA 63.8 min | batch 16
+[038500/50000] X4K    | loss 0.1226 | VRAM 9.8/15.9GB (62%) | GPU 96% | 3.14 it/s | ETA 61.1 min | batch 16
+[039000/50000] X4K    | loss 0.2065 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 58.4 min | batch 16
+[039500/50000] VIMEO  | loss 0.0673 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 55.8 min | batch 16
+[040000/50000] WMS    | loss 0.1317 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.14 it/s | ETA 53.1 min | batch 16
+[040500/50000] WMS    | loss 0.0974 | VRAM 9.8/15.9GB (62%) | GPU 99% | 3.14 it/s | ETA 50.4 min | batch 16
+[041000/50000] WMS    | loss 0.1621 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 47.8 min | batch 16
+[041500/50000] VIMEO  | loss 0.0610 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 45.1 min | batch 16
+[042000/50000] WMS    | loss 0.0605 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 42.4 min | batch 16
+[042500/50000] VIMEO  | loss 0.0795 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 39.8 min | batch 16
+[043000/50000] VIMEO  | loss 0.0729 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.14 it/s | ETA 37.1 min | batch 16
+[043500/50000] X4K    | loss 0.1493 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 34.5 min | batch 16
+[044000/50000] WMS    | loss 0.1470 | VRAM 9.8/15.9GB (62%) | GPU 95% | 3.14 it/s | ETA 31.8 min | batch 16
+[044500/50000] X4K    | loss 0.1152 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 29.2 min | batch 16
+[045000/50000] WMS    | loss 0.0683 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.14 it/s | ETA 26.6 min | batch 16
+[045500/50000] VIMEO  | loss 0.0466 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 23.9 min | batch 16
+[046000/50000] X4K    | loss 0.2161 | VRAM 9.8/15.9GB (62%) | GPU 13% | 3.14 it/s | ETA 21.2 min | batch 16
+[046500/50000] WMS    | loss 0.0643 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 18.6 min | batch 16
+[047000/50000] VIMEO  | loss 0.0734 | VRAM 9.8/15.9GB (62%) | GPU 94% | 3.14 it/s | ETA 15.9 min | batch 16
+[047500/50000] WMS    | loss 0.1859 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 13.3 min | batch 16
+[048000/50000] X4K    | loss 0.1448 | VRAM 9.8/15.9GB (62%) | GPU 97% | 3.14 it/s | ETA 10.6 min | batch 16
+[048500/50000] WMS    | loss 0.1365 | VRAM 9.8/15.9GB (62%) | GPU 96% | 3.14 it/s | ETA 8.0 min | batch 16
+[049000/50000] VIMEO  | loss 0.0699 | VRAM 9.8/15.9GB (62%) | GPU 91% | 3.14 it/s | ETA 5.3 min | batch 16
+[049500/50000] WMS    | loss 0.1783 | VRAM 9.8/15.9GB (62%) | GPU 98% | 3.14 it/s | ETA 2.7 min | batch 16
+
+Training complete.
+Final model saved to model_latest.pt
