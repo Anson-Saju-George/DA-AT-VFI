@@ -6,7 +6,7 @@ import math
 
 ROOTS = {
     "vimeo": r"D:\main-projects\VFI\vimeo_triplet",
-    "x4k": r"D:\main-projects\VFI\OpenDataLab___X4K1000FPS\raw\X4K1000FPS"
+    # "x4k": r"D:\main-projects\VFI\OpenDataLab___X4K1000FPS\raw\X4K1000FPS"
 }
 
 DEVICE = "cuda"
@@ -37,8 +37,8 @@ def eval_dataset(name, root, model):
         p_total += psnr(pred, It)
         count += 1
 
-        if i % 500 == 0:
-            print(f"[{i}/{len(dl)}]")
+        if i % 1000 == 0:
+            print(f"[{i}/{len(dl)}] | PSNR {p_total / count:.2f}")
 
     return p_total / count
 

@@ -9,7 +9,7 @@ import torch.optim as optim
 
 ROOTS = {
     "vimeo": r"D:\main-projects\VFI\vimeo_triplet",
-    "x4k": r"D:\main-projects\VFI\OpenDataLab___X4K1000FPS\raw\X4K1000FPS"
+    # "x4k": r"D:\main-projects\VFI\OpenDataLab___X4K1000FPS\raw\X4K1000FPS"
 }
 
 DEVICE = "cuda"

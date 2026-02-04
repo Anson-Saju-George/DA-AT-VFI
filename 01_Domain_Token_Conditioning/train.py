@@ -10,13 +10,13 @@ from pytorch_msssim import ssim
 
 ROOTS = {
     "vimeo": r"D:\\main-projects\\VFI\\vimeo_triplet",
-    "x4k":   r"D:\\main-projects\\VFI\\OpenDataLab___X4K1000FPS\\raw\\X4K1000FPS",
-    # "wms": r"D:\\main-projects\\WMS_Cleaned",
+    # "x4k":   r"D:\\main-projects\\VFI\\OpenDataLab___X4K1000FPS\\raw\\X4K1000FPS",
+    "wms": r"D:\\main-projects\\WMS_Cleaned",
 }
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-BATCH = 32
-WORKERS = 10
+BATCH = 16
+WORKERS = 8
 STEPS = 50000
 LOG_EVERY = 1000
 CROP = 256
@@ -24,7 +24,8 @@ LR = 5e-5
 
 WEIGHTS = {
     "vimeo": 0.5,
-    "x4k": 0.5,
+    # "x4k": 0.5,
+    "wms": 0.5,
 }
 
 
@@ -50,7 +51,7 @@ def train():
         iters[name] = iter(dl)
 
     print("Building model...")
-    model = DomainTokenVFI(num_domains=3).to(DEVICE)
+    model = DomainTokenVFI(num_domains=2).to(DEVICE)
     opt = optim.AdamW(model.parameters(), lr=LR)
 
     scaler = torch.amp.GradScaler("cuda")

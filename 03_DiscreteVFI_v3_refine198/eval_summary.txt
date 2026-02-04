@@ -1,0 +1,6 @@
+Evaluation Summary — DiscreteVFI_v3_refine198 (WMS)
+===============================================
+Mean PSNR: 34.265 dB
+Mean SSIM: 0.8832
+Failure Threshold: 20 dB
+Final Failure Rate: 7.55%
